@@ -7,13 +7,14 @@ interface ITour {
   ratingAverage: number
   ratingQuantity: number
   price: number
+  availableSeats : number
   imageCover: string
   images: string[]
   createdAt: Date
-  startedDates: Date[]
-  startedLocation: string
+  startDates: Date[]
+  startLocation: string
   locations: string[]
-  slugs: string
+  slug: string
 }
 
 interface ITourMethods {

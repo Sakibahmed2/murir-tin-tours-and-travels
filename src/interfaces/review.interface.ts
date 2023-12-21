@@ -1,4 +1,5 @@
-import { Schema } from 'mongoose'
+/* eslint-disable no-unused-vars */
+import { Model, Schema } from 'mongoose'
 
 interface IReview {
   review: string
@@ -8,4 +9,8 @@ interface IReview {
   user: Schema.Types.ObjectId
 }
 
-export { IReview }
+interface IReviewModel extends Model<IReview> {
+  calcAverageRatings(tourId: Schema.Types.ObjectId): Promise<void>
+}
+
+export { IReview, IReviewModel }

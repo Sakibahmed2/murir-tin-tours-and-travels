@@ -3,6 +3,9 @@ import User from '../models/user.model'
 
 const createUser = async (userData: IUser): Promise<IUser> => {
   const result = await User.create(userData)
+  //   const result = new User(userData)
+  //   await result.save()
+
   return result
 }
 
@@ -24,6 +27,7 @@ const updateUser = async (
     new: true,
     runValidators: true,
   })
+
   return result
 }
 
