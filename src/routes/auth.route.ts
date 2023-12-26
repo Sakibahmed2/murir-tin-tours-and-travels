@@ -6,4 +6,4 @@ const router = express.Router()
 router.post('/register', authController.register)
 router.post('/login', authController.login)
 
-export const userRoutes = router
+export const authRoutes = router
